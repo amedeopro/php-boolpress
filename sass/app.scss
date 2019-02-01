@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 60%;
+  height: 500px;
+  margin: 30px auto;
+  .post{
+    margin-bottom: 20px;
+  }
+}
