@@ -27,7 +27,7 @@
            <p><?php echo date($post['published_at']); ?></p>
          </div>
          <div class="estratto">
-           <?php echo trim($post['content']); ?>
+           <?php echo substr($post['content'],0,150); ?>
          </div>
        </div>
 
