@@ -29,10 +29,19 @@
                  <p><?php echo date($post['published_at']); ?></p>
                </div>
                <div class="contenuto">
-                 <p class="testo-contenuto"><?php echo trim($post['content']); ?></p>
+                 <p class="testo-contenuto"><?php echo $post['content']; ?></p>
                </div>
                <div class="tag">
-                 <p class="tag-contenuto"><?php echo var_dump($post['tag']); ?></p>
+                 <?php foreach($posts as $row => $innerArray){ ?>
+                   <?php foreach($innerArray as $innerRow => $value){ ?>
+                     <?php foreach ($value as $key => $tag) { ?>
+                        <p class="tag-contenuto"><?php echo $tag; ?></p>
+                     <?php } ?>
+
+                   <?php } ?>
+
+                 <?php } ?>
+
                </div>
              </div>
 
@@ -40,6 +49,8 @@
            </div>
          <?php } ?>
        <?php } ?>
+
+       
 
 
 
