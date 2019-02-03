@@ -20,6 +20,9 @@
            <div class="container">
 
              <div class="post">
+               <div class="immagine">
+                 <img src="<?php echo $post['image']; ?>" alt="">
+               </div>
                <div class="titolo">
 
                    <h1><?php echo $post['title']; ?></h1>
@@ -50,7 +53,7 @@
          <?php } ?>
        <?php } ?>
 
-       
+
 
 
 
