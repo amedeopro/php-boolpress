@@ -3,6 +3,7 @@
   $slug = $_GET['slug'];
 
   include 'data.php';
+  include 'data-comments.php';
 
    ?>
 
@@ -48,12 +49,24 @@
                </div>
              </div>
 
+             <div class="commenti">
+               <h3>Commenti:</h3>
+               <?php foreach ($comments as $slugs => $comment){ ?>
+                 <?php if ($slugs == $slug) { ?>
+                 <?php foreach ($comment as $key => $value) { ?>
+                   <p>Nome: <?php echo $value['name']; ?></p>
+                   <p>Email: <?php echo $value['email']; ?></p>
+                   <p>Commento: <?php echo $value['body']; ?></p>
+                   <br>
+               <?php } ?>
+               <?php } ?>
+             <?php } ?>
+             </div>
+
 
            </div>
          <?php } ?>
        <?php } ?>
-
-
 
 
 
