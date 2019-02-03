@@ -28,8 +28,11 @@
                <div class="giorno-pubblicazione">
                  <p><?php echo date($post['published_at']); ?></p>
                </div>
-               <div class="estratto">
-                 <?php echo trim($post['content']); ?>
+               <div class="contenuto">
+                 <p class="testo-contenuto"><?php echo trim($post['content']); ?></p>
+               </div>
+               <div class="tag">
+                 <p class="tag-contenuto"><?php echo var_dump($post['tag']); ?></p>
                </div>
              </div>
 
