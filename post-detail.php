@@ -36,13 +36,9 @@
                  <p class="testo-contenuto"><?php echo $post['content']; ?></p>
                </div>
                <div class="tag">
-                 <?php foreach($posts as $row => $innerArray){ ?>
-                   <?php foreach($innerArray as $innerRow => $value){ ?>
-                     <?php foreach ($value as $key => $tag) { ?>
-                        <p class="tag-contenuto"><?php echo $tag; ?></p>
-                     <?php } ?>
+                 <?php foreach($posts['tag'] as $tag){ ?>
 
-                   <?php } ?>
+                        <p class="tag-contenuto"><?php echo $tag; ?></p>
 
                  <?php } ?>
 

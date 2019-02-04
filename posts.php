@@ -15,6 +15,14 @@
    </head>
    <body>
 
+       <!-- <?php
+          $baseUrl = 'http://localhost';
+          $baseUrl .= $_SERVER["REQUEST_URI"];
+
+          var_dump($baseUrl);
+
+      ?> -->
+
      <div class="container">
        <?php foreach ($posts as $post) { ?>
        <div class="post">
@@ -27,7 +35,7 @@
            <p><?php echo date($post['published_at']); ?></p>
          </div>
          <div class="estratto">
-           <?php echo substr($post['content'],0,150); ?>
+           <?php echo substr($post['content'],0,150); ?>...
          </div>
        </div>
 
