@@ -30,7 +30,8 @@
 
                </div>
                <div class="giorno-pubblicazione">
-                 <p><?php echo date($post['published_at']); ?></p>
+                 <p>Pubblicato il <?php $date = DateTime ::createFromFormat("d/m/Y H:i:s",$post['published_at']); echo $date->format('d F ')?> alle 
+                 <?php echo $date->format('H') ?></p>
                </div>
                <div class="contenuto">
                  <p class="testo-contenuto"><?php echo $post['content']; ?></p>
